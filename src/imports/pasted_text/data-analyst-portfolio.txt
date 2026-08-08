@@ -1,0 +1,679 @@
+You are a Senior Product Designer with 20+ years of experience at Apple, Stripe, Linear, Framer, Vercel, Airbnb, and Google.
+
+Your task is to design a premium, production-ready personal portfolio website in FIGMA.
+
+The portfolio belongs to a Data Analyst & Business Intelligence Professional.
+
+The design must look better than 99% of portfolios on the internet.
+
+The design should be suitable for recruiters from:
+
+• Google
+• Microsoft
+• Amazon
+• Netflix
+• Uber
+• Atlassian
+• Deloitte
+• Accenture
+• EY
+• KPMG
+• JPMorgan
+• Fortune 500 Companies
+
+==================================================
+
+GOAL
+
+Create a portfolio that instantly communicates
+
+Professional
+Premium
+Minimal
+Modern
+Luxury
+Trustworthy
+Clean
+Fast
+Easy to scan
+
+No template feeling.
+
+No beginner UI.
+
+No Dribbble-only concepts.
+
+Everything should be realistic and production ready.
+
+==================================================
+
+DESIGN STYLE
+
+Use inspiration from
+
+Apple
+Linear
+Framer
+Raycast
+Notion
+Vercel
+Stripe
+Cursor
+OpenAI
+Arc Browser
+
+Characteristics
+
+Lots of whitespace
+
+Strong typography
+
+Glassmorphism only where appropriate
+
+Soft shadows
+
+Modern cards
+
+Rounded corners
+
+Excellent spacing
+
+Excellent hierarchy
+
+Smooth gradients
+
+Premium color palette
+
+Dark mode first
+
+Light mode optional
+
+Responsive design
+
+Pixel perfect
+
+8-point spacing system
+
+==================================================
+
+PORTFOLIO SECTIONS
+
+1 Hero
+
+Large introduction
+
+Professional photo placeholder
+
+Animated headline
+
+Short description
+
+CTA buttons
+
+Download Resume
+
+View Projects
+
+Social icons
+
+Availability badge
+
+==================================================
+
+2 About
+
+Professional story
+
+Timeline
+
+Experience
+
+Education
+
+Skills summary
+
+==================================================
+
+3 Skills
+
+Display using modern cards
+
+SQL
+
+Excel
+
+Power BI
+
+Tableau
+
+Python
+
+Pandas
+
+NumPy
+
+Statistics
+
+Machine Learning Basics
+
+Business Analysis
+
+Data Cleaning
+
+Dashboard Design
+
+Data Visualization
+
+==================================================
+
+4 Featured Projects
+
+Premium cards
+
+Each project should contain
+
+Image
+
+Title
+
+Description
+
+Tech Stack
+
+Business Problem
+
+Solution
+
+Results
+
+GitHub
+
+Live Demo
+
+Case Study
+
+==================================================
+
+5 Dashboard Showcase
+
+Interactive layout
+
+Power BI
+
+Excel
+
+SQL
+
+Tableau
+
+Screenshots
+
+==================================================
+
+6 Experience Timeline
+
+Beautiful timeline
+
+Cards
+
+Company
+
+Role
+
+Responsibilities
+
+Achievements
+
+==================================================
+
+7 Certifications
+
+Modern certification cards
+
+==================================================
+
+8 Testimonials
+
+Minimal
+
+Elegant
+
+==================================================
+
+9 Contact
+
+Large CTA
+
+Email
+
+LinkedIn
+
+GitHub
+
+Location
+
+Contact Form
+
+==================================================
+
+10 Footer
+
+Simple
+
+Premium
+
+==================================================
+
+TYPOGRAPHY
+
+Use modern fonts
+
+Inter
+
+Geist
+
+SF Pro
+
+General Sans
+
+Perfect typography hierarchy
+
+Display
+
+Heading
+
+Body
+
+Caption
+
+Button
+
+==================================================
+
+COLOR PALETTE
+
+Luxury dark theme
+
+Primary
+
+#0B0F19
+
+Secondary
+
+#151B2D
+
+Accent
+
+Blue
+
+Purple
+
+Cyan
+
+Very subtle gradients
+
+Text
+
+White
+
+Gray
+
+Muted
+
+==================================================
+
+ICONS
+
+Lucide Icons
+
+Simple Icons
+
+Heroicons
+
+==================================================
+
+ANIMATIONS (Prepare design for)
+
+Fade Up
+
+Parallax
+
+Hover Cards
+
+Magnetic Buttons
+
+Text Reveal
+
+Scroll Progress
+
+Mouse Glow
+
+Gradient Shift
+
+Floating Elements
+
+Smooth Page Transition
+
+==================================================
+
+RESPONSIVE BREAKPOINTS
+
+Desktop
+
+1440px
+
+Laptop
+
+1280px
+
+Tablet
+
+768px
+
+Mobile
+
+390px
+
+==================================================
+
+FIGMA ORGANIZATION
+
+Create a clean professional Figma file.
+
+Follow proper naming conventions.
+
+Pages
+
+01 Cover
+
+02 Design System
+
+03 Desktop
+
+04 Tablet
+
+05 Mobile
+
+06 Components
+
+07 Assets
+
+==================================================
+
+COMPONENT STRUCTURE
+
+Buttons
+
+Inputs
+
+Cards
+
+Navigation
+
+Footer
+
+Skill Cards
+
+Project Cards
+
+Timeline Cards
+
+Badges
+
+Tags
+
+Social Icons
+
+Reusable Sections
+
+Everything must use Auto Layout.
+
+==================================================
+
+AUTO LAYOUT
+
+Everything should use Auto Layout.
+
+No absolute positioning unless necessary.
+
+Proper constraints.
+
+Responsive resizing.
+
+Nested Auto Layout.
+
+Component Properties.
+
+Variants.
+
+Interactive Components.
+
+==================================================
+
+DESIGN SYSTEM
+
+Create
+
+Typography
+
+Spacing
+
+Grid
+
+Colors
+
+Elevation
+
+Radius
+
+Buttons
+
+Forms
+
+Icons
+
+Badges
+
+Cards
+
+Tags
+
+Shadows
+
+Effects
+
+==================================================
+
+GRID
+
+12-column layout
+
+Maximum container width
+
+1280px
+
+Margins
+
+80px
+
+Responsive grids
+
+==================================================
+
+ACCESSIBILITY
+
+WCAG AA
+
+Contrast
+
+Keyboard friendly
+
+Readable typography
+
+Accessible buttons
+
+==================================================
+
+IMAGE PLACEHOLDERS
+
+Use realistic placeholders
+
+Laptop mockups
+
+Dashboard screenshots
+
+Profile photo
+
+Analytics graphs
+
+==================================================
+
+MICRO DETAILS
+
+Hover states
+
+Pressed states
+
+Disabled states
+
+Loading skeletons
+
+Empty states
+
+Error states
+
+Success states
+
+==================================================
+
+DELIVERABLES
+
+Generate
+
+Complete Figma layout
+
+Design System
+
+Components
+
+Responsive Frames
+
+Naming Convention
+
+Developer Notes
+
+Spacing Tokens
+
+Color Tokens
+
+Typography Tokens
+
+Export Guidelines
+
+==================================================
+
+FOLDER STRUCTURE
+
+Portfolio
+
+│
+
+├── 01 Cover
+
+├── 02 Design System
+
+│ ├── Colors
+
+│ ├── Typography
+
+│ ├── Grid
+
+│ ├── Spacing
+
+│ ├── Shadows
+
+│ ├── Radius
+
+│ ├── Icons
+
+│ └── Components
+
+│
+
+├── 03 Desktop
+
+│ ├── Home
+
+│ ├── About
+
+│ ├── Projects
+
+│ ├── Experience
+
+│ ├── Contact
+
+│
+
+├── 04 Tablet
+
+├── 05 Mobile
+
+├── 06 Assets
+
+├── 07 Icons
+
+└── 08 Prototype
+
+==================================================
+
+CODE READINESS
+
+Design as if developers will build using
+
+Next.js
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion
+
+Shadcn UI
+
+Every spacing, sizing, typography, and component should translate directly into code.
+
+==================================================
+
+QUALITY REQUIREMENTS
+
+No copied UI.
+
+No generic portfolio.
+
+No unnecessary decoration.
+
+No inconsistent spacing.
+
+No random colors.
+
+No random fonts.
+
+No visual clutter.
+
+Maintain perfect alignment.
+
+Maintain design consistency.
+
+Use reusable components.
+
+Use design tokens.
+
+Maintain scalability.
+
+Maintain developer handoff quality.
+
+Follow modern UI/UX best practices used by top product companies.
+
+The final output should feel like a premium SaaS product website rather than a personal portfolio.
