@@ -20,6 +20,7 @@ export const person = {
   location: "Mumbai, India",
   phone: "+91-9967951406",
   email: "deep64.model@gmail.com",
+  avatar: "/profile.jpg",
   linkedin: "https://linkedin.com/in/deep-parulekar",
   github: "https://github.com/deep-parulekar",
   available: true,

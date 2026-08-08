@@ -162,13 +162,21 @@ export function Hero() {
               {/* Avatar container */}
               <div className="relative w-72 h-72 lg:w-80 lg:h-80">
                 <div className="w-full h-full rounded-full border-2 border-white/[0.12] bg-gradient-to-br from-[#151B2D] to-[#1E293B] flex items-center justify-center overflow-hidden shadow-2xl">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-600/20 via-violet-600/30 to-slate-800 flex flex-col items-center justify-center text-center p-6">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white text-3xl font-bold mb-3 shadow-lg shadow-blue-500/30">
-                      {person.initials}
+                  {"avatar" in person && person.avatar ? (
+                    <img
+                      src={person.avatar}
+                      alt={person.name}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-blue-600/20 via-violet-600/30 to-slate-800 flex flex-col items-center justify-center text-center p-6">
+                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white text-3xl font-bold mb-3 shadow-lg shadow-blue-500/30">
+                        {person.initials}
+                      </div>
+                      <span className="text-white font-bold text-lg">{person.name}</span>
+                      <span className="text-blue-400 text-xs mt-1 font-mono">{person.title}</span>
                     </div>
-                    <span className="text-white font-bold text-lg">{person.name}</span>
-                    <span className="text-blue-400 text-xs mt-1 font-mono">{person.title}</span>
-                  </div>
+                  )}
                 </div>
                 {/* Decorative orbit ring */}
                 <div className="absolute inset-[-12px] rounded-full border border-dashed border-white/[0.06] animate-[spin_20s_linear_infinite]" />
