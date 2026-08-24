@@ -62,18 +62,25 @@ export const projects: Project[] = [
     id: "retail-sales-profitability",
     title: "Retail Sales & Profitability Dashboard",
     description:
-      "Built a fully dynamic dashboard using Power Query for transformation and structured KPI summary sheets.",
+      "Built a dynamic Excel dashboard to analyze sales, profitability, product performance, and regional trends.",
     problem:
       "Leadership lacked a single view of sales, margin, and regional performance across product categories.",
     solution:
-      "Built a fully dynamic dashboard using Power Query for transformation and structured KPI summary sheets, surfacing top-performing categories, seasonal patterns, and underperforming segments for non-technical stakeholders with zero manual upkeep.",
+      "Used Power Query for data transformation, Pivot Tables, VLOOKUP, and KPI summary sheets to create an automated reporting workflow with minimal manual maintenance.",
     results: [
       "Zero manual upkeep required",
       "Unified view of sales, margin & regional performance",
-      "Surfaced top categories & seasonal patterns",
-      "Empowered non-technical stakeholders with live KPIs",
+      "Identified top-performing categories",
+      "Highlighted seasonal sales patterns",
+      "Improved visibility for non-technical stakeholders",
     ],
-    tech: ["Excel", "Power Query", "Pivot Tables", "VLOOKUP", "KPI Summary"],
+    tech: [
+      "Excel",
+      "Power Query",
+      "Pivot Tables",
+      "VLOOKUP",
+      "KPI Reporting",
+    ],
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format",
     github: "https://github.com/deep-parulekar",
@@ -81,22 +88,31 @@ export const projects: Project[] = [
     caseStudy: "#",
     featured: true,
   },
+
   {
     id: "hospital-er-dashboard",
     title: "Hospital Emergency Room Dashboard",
     description:
-      "Interactive Power BI dashboard with custom DAX measures, conditional formatting, and drill-through tooltips.",
+      "Interactive Power BI dashboard analyzing patient volume, wait times, department performance, and emergency room capacity.",
     problem:
-      "ER management needed visibility into patient volume and wait times to plan staffing across departments.",
+      "ER management needed better visibility into patient volume, waiting times, and peak operational periods.",
     solution:
-      "Built an interactive dashboard with custom DAX measures, conditional formatting, and drill-through tooltips; uncovered peak load patterns that informed data-driven staffing and capacity planning recommendations.",
+      "Created an interactive Power BI dashboard using data modeling, DAX measures, conditional formatting, KPIs, and drill-through functionality.",
     results: [
-      "Uncovered peak load patient volume patterns",
-      "Informed data-driven staffing & capacity planning",
-      "Implemented custom DAX measures & drill-throughs",
-      "Enhanced department-wide wait time visibility",
+      "Identified peak patient volume patterns",
+      "Improved visibility into department performance",
+      "Analyzed patient waiting-time trends",
+      "Supported staffing & capacity planning",
+      "Implemented interactive drill-through analysis",
     ],
-    tech: ["Power BI", "DAX", "Conditional Formatting", "Drill-through", "Data Modeling"],
+    tech: [
+      "Power BI",
+      "DAX",
+      "Data Modeling",
+      "Drill-through",
+      "Conditional Formatting",
+      "KPIs",
+    ],
     image:
       "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop&auto=format",
     github: "https://github.com/deep-parulekar",
@@ -104,28 +120,166 @@ export const projects: Project[] = [
     caseStudy: "#",
     featured: true,
   },
+
   {
     id: "airline-revenue-analytics",
     title: "Airline Reservation & Revenue Analytics",
     description:
-      "Designed a normalized database schema from scratch and ran advanced SQL analysis to reveal route profitability and passenger value.",
+      "Advanced SQL project analyzing airline reservations, passenger behavior, route performance, revenue, and load factors.",
     problem:
-      "Raw reservation data needed structuring and analysis to reveal route profitability and passenger value.",
+      "Raw reservation data needed to be structured and analyzed to understand revenue performance, route profitability, and passenger value.",
     solution:
-      "Designed a normalized database schema from scratch and ran advanced SQL analysis (multi-table JOINs, window functions, aggregations) to surface revenue trends, route profitability, load factor, and high-value passenger segments; delivered an executive-level insights report.",
+      "Designed a normalized relational database and performed advanced SQL analysis using JOINs, CTEs, aggregations, CASE statements, and window functions.",
     results: [
-      "Designed normalized database schema from scratch",
-      "Executed multi-table JOINs, window functions & CTEs",
-      "Identified key route profitability & load factors",
-      "Delivered executive-level insights report",
+      "Designed normalized database schema",
+      "Analyzed route-level revenue performance",
+      "Identified passenger value segments",
+      "Analyzed load factor and booking patterns",
+      "Used advanced SQL for business insights",
     ],
-    tech: ["SQL", "Relational Database Design", "Multi-table JOINs", "Window Functions", "CTEs"],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Relational Database Design",
+      "JOINs",
+      "CTEs",
+      "Window Functions",
+      "Aggregations",
+    ],
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop&auto=format",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
     featured: true,
+  },
+
+  {
+    id: "used-car-sales-analysis",
+    title: "Used Car Sales & Price Analysis",
+    description:
+      "Power BI analytics project analyzing used-car prices, mileage, fuel type, transmission, ownership, and vehicle characteristics.",
+    problem:
+      "The raw vehicle dataset contained multiple factors affecting resale prices, making it difficult to identify pricing patterns and high-value vehicle segments.",
+    solution:
+      "Cleaned and transformed the dataset, created mileage groups, developed calculated measures, and built an interactive Power BI dashboard to analyze pricing and vehicle characteristics.",
+    results: [
+      "Analyzed vehicle pricing patterns",
+      "Segmented vehicles by mileage",
+      "Compared fuel and transmission types",
+      "Analyzed ownership and vehicle age",
+      "Identified factors associated with higher resale prices",
+    ],
+    tech: [
+      "Power BI",
+      "Power Query",
+      "DAX",
+      "Data Cleaning",
+      "Data Modeling",
+      "KPI Dashboard",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=500&fit=crop&auto=format",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
+  },
+
+  {
+    id: "hotel-booking-analysis",
+    title: "Hotel Booking & Revenue Analysis",
+    description:
+      "SQL analytics project analyzing hotel bookings, cancellations, ADR, revenue, customer segments, and booking trends.",
+    problem:
+      "Hotel booking data needed to be transformed into actionable insights around revenue, cancellations, customer behavior, and operational performance.",
+    solution:
+      "Cleaned and analyzed booking data using SQL aggregations, CASE statements, filtering, date analysis, and business KPIs to identify revenue and booking patterns.",
+    results: [
+      "Analyzed total booking volume",
+      "Measured cancellation patterns",
+      "Calculated hotel revenue using ADR",
+      "Compared customer and booking segments",
+      "Identified important booking trends",
+    ],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Aggregations",
+      "CASE Statements",
+      "Date Functions",
+      "KPI Analysis",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop&auto=format",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
+  },
+
+  {
+    id: "loan-default-analysis",
+    title: "Loan Default Risk Analysis",
+    description:
+      "SQL analytics project analyzing loan applications, borrower characteristics, loan amounts, interest rates, and default behavior.",
+    problem:
+      "Loan data contained multiple borrower and loan attributes that needed to be analyzed to understand default patterns and financial risk.",
+    solution:
+      "Imported and structured the loan dataset in SQL, performed data cleaning and business analysis, and created queries to identify default trends across borrower and loan segments.",
+    results: [
+      "Analyzed loan default patterns",
+      "Compared default rates across borrower segments",
+      "Analyzed loan amount and interest-rate trends",
+      "Identified higher-risk customer segments",
+      "Built SQL queries for financial risk analysis",
+    ],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Data Cleaning",
+      "Aggregations",
+      "CASE Statements",
+      "Business Analysis",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop&auto=format",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: false,
+  },
+
+  {
+    id: "bank-aml-analytics",
+    title: "Bank AML & Transaction Monitoring",
+    description:
+      "SQL database project focused on banking transactions, customers, accounts, risk indicators, and AML monitoring.",
+    problem:
+      "Financial institutions need structured transaction data and reliable SQL analysis to identify suspicious activity and support AML reporting.",
+    solution:
+      "Designed a relational banking database architecture with structured tables and relationships for customers, accounts, transactions, and AML-related analysis.",
+    results: [
+      "Designed structured relational database architecture",
+      "Created interconnected banking data entities",
+      "Prepared transaction data for AML analysis",
+      "Supported suspicious-activity investigation workflows",
+      "Built a foundation for compliance reporting",
+    ],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Database Design",
+      "DDL",
+      "Relational Modeling",
+      "AML Analytics",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: false,
   },
 ];
 
