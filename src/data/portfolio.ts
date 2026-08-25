@@ -59,95 +59,30 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    id: "retail-sales-profitability",
-    title: "Retail Sales & Profitability Dashboard",
+    id: "manufacturing-quality-analytics",
+    title: "Manufacturing Quality & Factory Performance",
     description:
-      "Built a dynamic Excel dashboard to analyze sales, profitability, product performance, and regional trends.",
+      "SQL analysis comparing four manufacturing plants across defect rate, production volume, downtime, and machine failures to identify different operational root causes.",
     problem:
-      "Leadership lacked a single view of sales, margin, and regional performance across product categories.",
+      "A single metric such as defect rate could incorrectly label a factory as the worst performer, so the analysis needed to evaluate quality, downtime, and machine reliability together.",
     solution:
-      "Used Power Query for data transformation, Pivot Tables, VLOOKUP, and KPI summary sheets to create an automated reporting workflow with minimal manual maintenance.",
+      "Used MySQL aggregations and multi-metric ranking to compare factory performance and separate process-quality issues from machine-reliability issues.",
     results: [
-      "Zero manual upkeep required",
-      "Unified view of sales, margin & regional performance",
-      "Identified top-performing categories",
-      "Highlighted seasonal sales patterns",
-      "Improved visibility for non-technical stakeholders",
-    ],
-    tech: [
-      "Excel",
-      "Power Query",
-      "Pivot Tables",
-      "VLOOKUP",
-      "KPI Reporting",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format",
-    github: "https://github.com/deep-parulekar",
-    demo: "#",
-    caseStudy: "#",
-    featured: true,
-  },
-
-  {
-    id: "hospital-er-dashboard",
-    title: "Hospital Emergency Room Dashboard",
-    description:
-      "Interactive Power BI dashboard analyzing patient volume, wait times, department performance, and emergency room capacity.",
-    problem:
-      "ER management needed better visibility into patient volume, waiting times, and peak operational periods.",
-    solution:
-      "Created an interactive Power BI dashboard using data modeling, DAX measures, conditional formatting, KPIs, and drill-through functionality.",
-    results: [
-      "Identified peak patient volume patterns",
-      "Improved visibility into department performance",
-      "Analyzed patient waiting-time trends",
-      "Supported staffing & capacity planning",
-      "Implemented interactive drill-through analysis",
-    ],
-    tech: [
-      "Power BI",
-      "DAX",
-      "Data Modeling",
-      "Drill-through",
-      "Conditional Formatting",
-      "KPIs",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop&auto=format",
-    github: "https://github.com/deep-parulekar",
-    demo: "#",
-    caseStudy: "#",
-    featured: true,
-  },
-
-  {
-    id: "airline-revenue-analytics",
-    title: "Airline Reservation & Revenue Analytics",
-    description:
-      "Advanced SQL project analyzing airline reservations, passenger behavior, route performance, revenue, and load factors.",
-    problem:
-      "Raw reservation data needed to be structured and analyzed to understand revenue performance, route profitability, and passenger value.",
-    solution:
-      "Designed a normalized relational database and performed advanced SQL analysis using JOINs, CTEs, aggregations, CASE statements, and window functions.",
-    results: [
-      "Designed normalized database schema",
-      "Analyzed route-level revenue performance",
-      "Identified passenger value segments",
-      "Analyzed load factor and booking patterns",
-      "Used advanced SQL for business insights",
+      "Aurangabad had the highest defect rate at 8.39%",
+      "Pune produced the most units at 2.05M",
+      "Pune recorded the highest downtime at 76,521 minutes",
+      "Pune recorded the most machine failures at 2,102",
+      "Showed why factory performance cannot be judged by one KPI alone",
     ],
     tech: [
       "SQL",
       "MySQL",
-      "Relational Database Design",
-      "JOINs",
-      "CTEs",
-      "Window Functions",
+      "GROUP BY",
       "Aggregations",
+      "CASE",
+      "Business Analysis",
     ],
-    image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=500&fit=crop&auto=format",
+    image: "/projects/manufacturing-quality.png",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
@@ -155,20 +90,21 @@ export const projects: Project[] = [
   },
 
   {
-    id: "used-car-sales-analysis",
-    title: "Used Car Sales & Price Analysis",
+    id: "used-car-sales-pricing",
+    title: "Used Car Sales & Pricing Analytics",
     description:
-      "Power BI analytics project analyzing used-car prices, mileage, fuel type, transmission, ownership, and vehicle characteristics.",
+      "Power BI dashboard analyzing used-car pricing, vehicle age, mileage, brands, fuel types, price segments, and transmission mix.",
     problem:
-      "The raw vehicle dataset contained multiple factors affecting resale prices, making it difficult to identify pricing patterns and high-value vehicle segments.",
+      "The dataset contained multiple vehicle attributes affecting resale value, making it difficult to quickly understand pricing patterns and market demand.",
     solution:
-      "Cleaned and transformed the dataset, created mileage groups, developed calculated measures, and built an interactive Power BI dashboard to analyze pricing and vehicle characteristics.",
+      "Cleaned and transformed the data, created calculated measures and mileage groups, and built a focused dashboard around the questions a manager would actually need answered.",
     results: [
-      "Analyzed vehicle pricing patterns",
-      "Segmented vehicles by mileage",
-      "Compared fuel and transmission types",
-      "Analyzed ownership and vehicle age",
-      "Identified factors associated with higher resale prices",
+      "15K cars analyzed",
+      "120 vehicle models across 31 brands",
+      "Average car price: 774.70K",
+      "Average vehicle age: 6.04 years",
+      "Average mileage: 55.64K",
+      "Focused the report on 7 KPIs and 6 decision-oriented visuals",
     ],
     tech: [
       "Power BI",
@@ -178,8 +114,7 @@ export const projects: Project[] = [
       "Data Modeling",
       "KPI Dashboard",
     ],
-    image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=500&fit=crop&auto=format",
+    image: "/projects/used-car-pricing.png",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
@@ -187,31 +122,32 @@ export const projects: Project[] = [
   },
 
   {
-    id: "hotel-booking-analysis",
-    title: "Hotel Booking & Revenue Analysis",
+    id: "hotel-booking-revenue",
+    title: "Hotel Booking & Revenue Analytics",
     description:
-      "SQL analytics project analyzing hotel bookings, cancellations, ADR, revenue, customer segments, and booking trends.",
+      "Advanced SQL project analyzing hotel bookings, cancellations, ADR, customer segments, booking channels, lead time, and revenue contribution.",
     problem:
-      "Hotel booking data needed to be transformed into actionable insights around revenue, cancellations, customer behavior, and operational performance.",
+      "The first revenue calculation summed ADR directly and produced an attractive but incorrect total because ADR is a daily rate rather than booking revenue.",
     solution:
-      "Cleaned and analyzed booking data using SQL aggregations, CASE statements, filtering, date analysis, and business KPIs to identify revenue and booking patterns.",
+      "Validated the business meaning of the metric, corrected revenue to ADR multiplied by total stay nights, then used CTEs and ROW_NUMBER to rank countries by revenue contribution.",
     results: [
-      "Analyzed total booking volume",
-      "Measured cancellation patterns",
-      "Calculated hotel revenue using ADR",
-      "Compared customer and booking segments",
-      "Identified important booking trends",
+      "25 SQL business-analysis queries",
+      "Corrected revenue using ADR × total stay nights",
+      "Ranked countries by revenue contribution",
+      "Used CTEs and ROW_NUMBER for analytical ranking",
+      "Applied LAG and running-total analysis",
+      "Analyzed cancellations, channels, customer types, and lead-time behavior",
     ],
     tech: [
       "SQL",
       "MySQL",
+      "CTEs",
+      "ROW_NUMBER",
+      "LAG",
       "Aggregations",
-      "CASE Statements",
-      "Date Functions",
-      "KPI Analysis",
+      "Date Analysis",
     ],
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop&auto=format",
+    image: "/projects/hotel-booking.png",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
@@ -219,67 +155,198 @@ export const projects: Project[] = [
   },
 
   {
-    id: "loan-default-analysis",
-    title: "Loan Default Risk Analysis",
+    id: "supply-chain-performance",
+    title: "Supply Chain Performance Analytics",
     description:
-      "SQL analytics project analyzing loan applications, borrower characteristics, loan amounts, interest rates, and default behavior.",
+      "Power BI dashboard analyzing 66K orders across sales, profit, regions, categories, products, and shipping performance.",
     problem:
-      "Loan data contained multiple borrower and loan attributes that needed to be analyzed to understand default patterns and financial risk.",
+      "Management needed a compact view of commercial performance and delivery reliability, especially where shipping promises were failing.",
     solution:
-      "Imported and structured the loan dataset in SQL, performed data cleaning and business analysis, and created queries to identify default trends across borrower and loan segments.",
+      "Built a Power BI report combining sales and profit trends with category, region, product, and shipping-mode analysis to expose operational outliers.",
     results: [
-      "Analyzed loan default patterns",
-      "Compared default rates across borrower segments",
-      "Analyzed loan amount and interest-rate trends",
-      "Identified higher-risk customer segments",
-      "Built SQL queries for financial risk analysis",
+      "66K orders analyzed",
+      "36.78M total sales",
+      "3.97M total profit",
+      "57.33% overall late-delivery rate",
+      "First Class showed 100% late delivery in the analysis",
+      "Standard Class showed 39.87% late delivery",
     ],
     tech: [
-      "SQL",
-      "MySQL",
-      "Data Cleaning",
-      "Aggregations",
-      "CASE Statements",
-      "Business Analysis",
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "KPI Reporting",
+      "Trend Analysis",
+      "Supply Chain Analytics",
     ],
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop&auto=format",
+    image: "/projects/supply-chain.png",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
-    featured: false,
+    featured: true,
   },
 
   {
-    id: "bank-aml-analytics",
-    title: "Bank AML & Transaction Monitoring",
+    id: "hr-attrition-salary",
+    title: "HR Attrition & Salary Analytics",
     description:
-      "SQL database project focused on banking transactions, customers, accounts, risk indicators, and AML monitoring.",
+      "SQL and Power BI analysis of employee attrition, salary distribution, departments, age groups, and salary bands.",
     problem:
-      "Financial institutions need structured transaction data and reliable SQL analysis to identify suspicious activity and support AML reporting.",
+      "The headline attrition rate did not explain where employee turnover was concentrated or whether salary alone could explain the pattern.",
     solution:
-      "Designed a relational banking database architecture with structured tables and relationships for customers, accounts, transactions, and AML-related analysis.",
+      "Used SQL for attrition analysis, salary comparisons, CTEs, DENSE_RANK, and NTILE, then translated the findings into executive and salary-analysis Power BI pages.",
     results: [
-      "Designed structured relational database architecture",
-      "Created interconnected banking data entities",
-      "Prepared transaction data for AML analysis",
-      "Supported suspicious-activity investigation workflows",
-      "Built a foundation for compliance reporting",
+      "1,470 employees analyzed",
+      "Overall attrition rate: 16.12%",
+      "Sales had the highest attrition at 20.63%",
+      "Sales also had the highest average salary at 6,959",
+      "Used DENSE_RANK to find top earners by department",
+      "Used NTILE to create salary quartiles",
     ],
     tech: [
       "SQL",
       "MySQL",
-      "Database Design",
-      "DDL",
-      "Relational Modeling",
-      "AML Analytics",
+      "Power BI",
+      "DAX",
+      "DENSE_RANK",
+      "NTILE",
+      "Power Query",
     ],
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&auto=format",
+    image: "/projects/hr-attrition.png",
     github: "https://github.com/deep-parulekar",
     demo: "#",
     caseStudy: "#",
-    featured: false,
+    featured: true,
+  },
+
+  {
+    id: "blinkit-retail-analysis",
+    title: "Blinkit Retail Sales & Outlet Analysis",
+    description:
+      "End-to-end SQL and Power BI analysis of Blinkit retail sales, outlets, products, categories, location tiers, and product rankings.",
+    problem:
+      "Raw retail data contained inconsistent category values and nulls, while outlet-level performance was difficult to compare without structured analysis.",
+    solution:
+      "Cleaned the data in SQL, performed EDA and business analysis, then used window functions and Power BI to analyze outlet performance, categories, location tiers, and top products.",
+    results: [
+      "1.49 crore total sales in the SQL analysis",
+      "Compared outlet performance across 8 outlets",
+      "Identified an unusually low-performing outlet averaging about 339 in sales",
+      "Standardized LF, low fat, and Low Fat values",
+      "Used DENSE_RANK and CTEs for product/category analysis",
+      "Built an interactive retail intelligence dashboard",
+    ],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "CTEs",
+      "DENSE_RANK",
+    ],
+    image: "/projects/blinkit-retail.png",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
+  },
+
+  {
+    id: "ecommerce-revenue-profit",
+    title: "E-commerce Revenue & Profit Analysis",
+    description:
+      "Full SQL pipeline covering database design, joins, revenue, net revenue, profit, customer analysis, and window-function analysis.",
+    problem:
+      "The business needed a structured relational model and analysis layer to move from raw orders to reliable customer, product, revenue, and profit insights.",
+    solution:
+      "Designed five related tables, validated the data with basic aggregations, joined the schema for business questions, calculated revenue and profit, and applied ranking and time-series window functions.",
+    results: [
+      "5-table relational schema",
+      "500 orders and 1,213 order line items",
+      "3,038 total units sold",
+      "43.6L total revenue",
+      "13.9L total profit",
+      "Used RANK, DENSE_RANK, ROW_NUMBER, LAG, and PARTITION BY",
+    ],
+    tech: [
+      "SQL",
+      "MySQL",
+      "Schema Design",
+      "JOINs",
+      "CTEs",
+      "Window Functions",
+      "Profit Analysis",
+    ],
+    image: "/projects/ecommerce-profit.png",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
+  },
+
+  {
+    id: "healthcare-patient-flow",
+    title: "MedCare Patient Flow & Quality Analytics",
+    description:
+      "Two-page Power BI report analyzing patient visits, waiting time, readmission, mortality, satisfaction, severity, outcomes, and hospital performance.",
+    problem:
+      "Executive KPIs can hide concentrated operational and clinical risk, so the report needed a drill-down from overall performance into severity and hospital-level patterns.",
+    solution:
+      "Used Power Query for cleanup, DAX measures for readmission and mortality, and Power BI drill-downs to connect executive KPIs with patient-flow and outcome details.",
+    results: [
+      "10K patient visits analyzed",
+      "Average wait time: 46.84 minutes",
+      "Readmission rate: 17.3%",
+      "Average satisfaction: 74.99",
+      "Overall mortality rate: 0.90%",
+      "Drilled into severity, hospital, region, department, and outcome",
+    ],
+    tech: [
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Drill-down",
+      "KPIs",
+      "Healthcare Analytics",
+    ],
+    image: "/projects/medcare-patient-flow.png",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
+  },
+
+  {
+    id: "telecom-churn-retention",
+    title: "Telecom Customer Churn & Retention",
+    description:
+      "SQL and Power BI churn analysis of 7,043 telecom customers focused on contract type, payment method, customer segments, and revenue impact.",
+    problem:
+      "The overall churn rate alone did not reveal which combinations of customer characteristics were driving the highest risk of leaving.",
+    solution:
+      "Used SQL segmentation and conditional analysis to isolate churn patterns, then built a Power BI dashboard to communicate the retention story clearly.",
+    results: [
+      "7,043 customers analyzed",
+      "Overall churn rate: 26.54%",
+      "Month-to-month + electronic check churn: 53.7%",
+      "One-year + electronic check churn: 18.4%",
+      "Two-year + electronic check churn: 7.7%",
+      "Highlighted contract length as a key retention signal",
+    ],
+    tech: [
+      "SQL",
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Segmentation",
+      "Churn Analysis",
+    ],
+    image: "/projects/telecom-churn.png",
+    github: "https://github.com/deep-parulekar",
+    demo: "#",
+    caseStudy: "#",
+    featured: true,
   },
 ];
 
