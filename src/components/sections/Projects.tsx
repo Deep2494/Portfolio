@@ -1,10 +1,19 @@
-import { useState } from "react";
-import { ExternalLink, Github, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ExternalLink, Github, ArrowRight, TrendingUp, Maximize2, X } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 import { FadeUp } from "../animations/FadeUp";
 import { projects, person } from "../../data/portfolio";
 import type { Project } from "../../types";
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({
+  project,
+  index,
+  onImageClick,
+}: {
+  project: Project;
+  index: number;
+  onImageClick: (project: Project) => void;
+}) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -15,15 +24,27 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         className="group relative bg-[#111827] border border-white/[0.07] rounded-3xl overflow-hidden hover:border-white/[0.14] transition-all duration-300 hover:shadow-2xl hover:shadow-black/40"
       >
         {/* Image */}
-        <div className="relative h-52 overflow-hidden bg-[#0F1623]">
+        <div
+          onClick={() => onImageClick(project)}
+          className="relative h-52 overflow-hidden bg-[#0F1623] cursor-pointer group/img"
+          title="Click to view image in full screen"
+        >
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover/img:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent pointer-events-none" />
+
+          {/* Hover backdrop overlay with zoom indicator */}
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-medium text-xs backdrop-blur-[2px]">
+            <span className="px-3 py-1.5 rounded-full bg-white/20 border border-white/30 backdrop-blur-md flex items-center gap-1.5 shadow-lg transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+              <Maximize2 size={14} /> Expand Image
+            </span>
+          </div>
+
           {/* Tech badges overlay */}
-          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5">
+          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5 pointer-events-none">
             {project.tech.slice(0, 4).map((t) => (
               <span
                 key={t}
@@ -106,6 +127,24 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+    if (selectedProject) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedProject]);
+
   return (
     <section id="projects" className="py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -142,10 +181,82 @@ export function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={i}
+              onImageClick={(proj) => setSelectedProject(proj)}
+            />
           ))}
         </div>
       </div>
+
+      {/* Image Modal Lightbox */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProject(null)}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10 select-none"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-6xl max-h-[92vh] w-full bg-[#111827] border border-white/10 rounded-2xl overflow-hidden flex flex-col shadow-2xl"
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0F1623]">
+                <div>
+                  <h3 className="text-white font-bold text-lg sm:text-xl">
+                    {selectedProject.title}
+                  </h3>
+                  <p className="text-xs font-mono text-blue-400 mt-0.5">
+                    Click anywhere outside or press ESC to close
+                  </p>
+                </div>
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-[#94A3B8] hover:text-white transition-colors"
+                  aria-label="Close modal"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Modal Body / Image */}
+              <div className="relative flex-1 bg-[#090D16] p-4 sm:p-6 flex items-center justify-center overflow-auto max-h-[75vh]">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
+                />
+              </div>
+
+              {/* Modal Footer */}
+              <div className="px-6 py-3 border-t border-white/10 bg-[#0F1623] flex flex-wrap items-center justify-between gap-3 text-xs text-[#94A3B8]">
+                <div className="flex flex-wrap gap-1.5">
+                  {selectedProject.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2.5 py-1 rounded-md bg-[#0B0F19] border border-white/10 font-mono text-[11px]"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <span className="text-[#64748B] text-[11px]">
+                  Full Resolution Preview
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
